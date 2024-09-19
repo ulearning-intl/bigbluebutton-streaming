@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+export METEOR_ALLOW_SUPERUSER=true
+
 # Check if the user is root
 # if [[ $EUID -eq 0 ]]; then
 #     echo "Error: This script should not be run as root."

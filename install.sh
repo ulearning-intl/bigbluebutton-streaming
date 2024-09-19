@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+export METEOR_ALLOW_SUPERUSER=true
+
 # Define an array of available versions
 available_versions=("2.6.10" "2.6.12" "2.7.0-beta.2" "2.7.12" "2.7.13")  # Add more versions as needed
 
