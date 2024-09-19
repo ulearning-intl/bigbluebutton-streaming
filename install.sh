@@ -2,13 +2,13 @@
 set -e
 
 # Define an array of available versions
-available_versions=("2.6.10" "2.6.12" "2.7.0-beta.2" "2.7.12")  # Add more versions as needed
+available_versions=("2.6.10" "2.6.12" "2.7.0-beta.2" "2.7.12" "2.7.13")  # Add more versions as needed
 
 # Check if the user is root
-if [[ $EUID -eq 0 ]]; then
-    echo "Error: This script should not be run as root."
-    exit 1
-fi
+# if [[ $EUID -eq 0 ]]; then
+#     echo "Error: This script should not be run as root."
+#     exit 1
+# fi
 
 # Get the BigBlueButton version from the release file
 version=$(grep -oP 'BIGBLUEBUTTON_RELEASE=\K.*' /etc/bigbluebutton/bigbluebutton-release)

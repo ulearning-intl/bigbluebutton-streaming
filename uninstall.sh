@@ -2,10 +2,10 @@
 set -e
 
 # Check if the user is root
-if [[ $EUID -eq 0 ]]; then
-    echo "Error: This script should not be run as root."
-    exit 1
-fi
+# if [[ $EUID -eq 0 ]]; then
+#     echo "Error: This script should not be run as root."
+#     exit 1
+# fi
 
 # Get the list of container IDs for the image
 container_ids=$(sudo docker ps -q --filter ancestor=bbb-stream:v1.0)
