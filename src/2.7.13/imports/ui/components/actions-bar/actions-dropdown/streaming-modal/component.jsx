@@ -4,15 +4,16 @@ import Styled from './styles';
 import { startStreaming } from './service';
 import CircularProgress from '@material-ui/core/CircularProgress'
 
-
+const rtmpURL = Meteor.settings.public.app.rtmpURL;
+const streamKey = Meteor.settings.public.app.streamKey;
 
 class StreamingModal extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      streamUrl: '',
-      streamKey: '',
+      streamUrl: rtmpURL,
+      streamKey: streamKey,
       errorMsg: '',
       isLoading: false,
     };
