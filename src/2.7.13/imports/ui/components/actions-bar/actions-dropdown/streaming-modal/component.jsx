@@ -110,6 +110,7 @@ class StreamingModal extends Component {
 
   render() {
     const { setIsOpen, isOpen, onRequestClose, priority, } = this.props;
+    const { streamUrl, streamKey } = this.state;
     const { animations } = Settings.application;
 
 
