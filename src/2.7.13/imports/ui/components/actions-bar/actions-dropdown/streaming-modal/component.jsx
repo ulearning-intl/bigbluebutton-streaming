@@ -132,6 +132,7 @@ class StreamingModal extends Component {
                 autoFocus
                 id="stream-url"
                 onChange={this.handleChangeInput}
+                value={streamUrl}
                 name="streamUrl"
                 placeholder={"RTMP URL from Facebook, YouTube or Vimeo"}
                 onPaste={(e) => { e.stopPropagation(); }}
@@ -145,6 +146,7 @@ class StreamingModal extends Component {
               <input
                 id="stream-key"
                 onChange={this.handleChangeInput}
+                value={streamKey}
                 name="streamKey"
                 placeholder={"stream key from Facebook, YouTube or Vimeo"}
                 onPaste={(e) => { e.stopPropagation(); }}
